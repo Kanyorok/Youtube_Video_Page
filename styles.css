@@ -1,16 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     background-color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header {
+.header {
     background-color: rgba(255, 255, 255, 0.75);
     display: flex;
+    justify-content: space-between;
     height: 55px;
     padding: 18px;
     align-items: center;
@@ -18,31 +22,68 @@ header {
 
 .scale_image{
     width: auto;
-    height: 25px;
-}
-.logo, .search_bar, .notification {
-    display: inline-block;
+    height: 20px;
 }
 
-.top_bar{
-    padding-top: 12px;
-    padding-left: 15px;
-    padding-right: 15px;
-}
 
 .search_bar {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 240px;
-    margin-right: 240px;
+    display: flex;
 }
 
-.search_part{
-    height: 35px;
-    width: 300px;
+.search_bar form{
+    display: flex;
+    height: 45px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    overflow-x: hidden;
+}
+
+.search_bar input{
+    width: 600px;
+    padding:10px;
+    border: 0;
+    height: 100%;
     border-radius: 20px;
 }
 
-.btn_search{
-
+.search_bar button {
+    height: 100%;
+    width: 60px;
+    border: none;
 }
+
+main{
+    height: calc(100vh - 70px);
+    display: flex;
+    background-color: beige;
+}
+
+.scroll_vids {
+    height: 100%;
+    width: 20%;
+    background-color: #f9f9f9;
+    overflow-y: hidden;
+    
+}
+
+.content_main{
+    width: 80%;
+    float: right;
+}
+
+@media (max-width: 768px) {
+    .scroll_vids {
+      display: none;
+    }
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.left #menu{
+    padding: 0 7px;
+    cursor: pointer;
+}
+
